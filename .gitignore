@@ -1,0 +1,19 @@
+# build artifacts
+*.o
+*.out
+compiler
+scanner
+parser
+lex.yy.c
+y.tab.c
+y.tab.h
+y.output
+output.s
+main.S
+a.out
+
+# OS / editor junk
+.DS_Store
+Icon
+desktop.ini
+.vscode/

@@ -1,0 +1,66 @@
+scanner pull in ID main
+Parse function with type : main
+Reduce -> empty function param
+scanner pull in ID a
+parse variable : a
+scanner pull in ID b
+parse variable : b
+scanner pull in ID c
+scanner pull in ; 
+parse variable : c
+parse multiple variables
+parse multiple variables
+parse variable declaration 
+scanner pull in ID write
+scanner pull in string "Enter two numbers:"
+parse function calling param with constant
+finished calling parameters list
+parse a function call : write
+expression is function call 
+scanner pull in ; 
+scanner pull in ID a
+parse array declaration : a
+scanner pull in ID read
+parse function calling param with expression
+finished calling parameters list
+parse a function call : read
+expression is function call 
+scanner pull in ; 
+parse assign expression
+scanner pull in ID b
+parse array declaration : b
+scanner pull in ID read
+parse function calling param with expression
+finished calling parameters list
+parse a function call : read
+expression is function call 
+scanner pull in ; 
+parse assign expression
+scanner pull in ID c
+parse array declaration : c
+scanner pull in ID a
+parse array declaration : a
+scanner pull in ID b
+parse array declaration : b
+parse expression as constant 
+scanner pull in ; 
+parse * operation
+parse + operation
+parse assign expression
+scanner pull in ID write
+scanner pull in string "Result is:"
+parse function calling param with constant
+finished calling parameters list
+parse a function call : write
+expression is function call 
+scanner pull in ; 
+scanner pull in ID write
+scanner pull in ID c
+parse array declaration : c
+parse function calling param with expression
+finished calling parameters list
+parse a function call : write
+expression is function call 
+scanner pull in ; 
+Reduce -> function declaration
+Reduce -> program
