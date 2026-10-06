@@ -1,24 +1,10 @@
-> 這是我在台大資訊工程系「編譯程式設計」（CSIE3230，114-1，洪鼎詠教授）的期末專案：一個會產生 RISC-V 64 位元組合語言的 C-- 編譯器，與一位同學合作完成。本頁整理設計說明、我的分工與測試成果；完整原始碼在 [`stages/`](stages) 底下，依四個階段（lexer／parser／語意分析／程式碼產生）分別存放。
-
 # C-- Compiler — RISC-V Code Generator
 
-A from-scratch compiler for **C--** (a small, carefully restricted subset of ANSI C) that compiles down to **RISC-V 64-bit assembly**, runnable under QEMU. Built as the four-part final project for the *Compiler Design* course (CSIE3230) at National Taiwan University, Fall 2025 (114-1), taught by Prof. Ding-Yong Hong.
+A from-scratch compiler for **C--** (a small, carefully restricted subset of ANSI C) that compiles down to **RISC-V 64-bit assembly**, runnable under QEMU. Built as the four-part final project for the *Compiler Design* course (CSIE3230) at National Taiwan University, Fall 2025 (114-1), taught by Prof. Ding-Yong Hong, as a 2-person team across four incremental milestones.
 
-**Team of 2.** Built incrementally across four milestones, each adding one stage of the pipeline.
-
-> **Source layout**: the full implementation lives under [`stages/`](stages), split into the four graded milestones (lexer → parser → semantic analysis → code generation). `stages/hw4-codegen/` is the final, complete compiler; each earlier stage folder is a snapshot of the project as it stood at that milestone, not a separate standalone program. Teammate contributions are included as committed, but my teammate is referred to only as "my teammate" throughout — not by name — since this repository was published under my own account without a separate attribution pass on their behalf.
+The full implementation lives under [`stages/`](stages), split into the four graded milestones (lexer → parser → semantic analysis → code generation). `stages/hw4-codegen/` is the final, complete compiler; each earlier stage folder is a snapshot of the project as it stood at that milestone, not a separate standalone program. My teammate is referred to only as "my teammate" throughout, not by name, since this repository was published under my own account without a separate attribution pass on their behalf.
 
 ## Pipeline
-
-```mermaid
-flowchart LR
-    A[C-- source] --> B[Lexer\nflex]
-    B --> C[Parser\nbison / yacc]
-    C --> D[AST]
-    D --> E[Semantic Analysis\n+ Symbol Table]
-    E --> F[Code Generation]
-    F --> G[RISC-V 64-bit\nassembly]
-```
 
 Each stage was a separate graded milestone, built on top of the previous one:
 
